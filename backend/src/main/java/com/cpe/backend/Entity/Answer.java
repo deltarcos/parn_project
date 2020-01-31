@@ -22,19 +22,18 @@ import javax.persistence.FetchType;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Table(name = "Question")
-public class Question {
+@Table(name = "Answer")
+public class Answer {
 
     @Id
-    @SequenceGenerator(name="question_seq",sequenceName="question_seq", initialValue=1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="question_seq")
-    @Column(name = "QUESTION_ID", unique = true, nullable = true)
+    @SequenceGenerator(name="answer_seq",sequenceName="answer_seq", initialValue=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="answer_seq")
+    @Column(name = "ANSWER_ID", unique = true, nullable = true)
     private @NonNull Long id;
 
  
-    private @NotNull String q;
 
-
+    private @NotNull String a;
 
 
 
@@ -43,16 +42,14 @@ public class Question {
         this.id = id;
     }
 
-    public String getQuestion(){
-        return q;
+
+    public String getAnswer(){
+        return a;
     }
 
-
-    public void setQuestion(String q){
-        this.q = q;
+    public void setAnswer(String a){
+        this.a = a;
     }
-
-    
 
 }
 

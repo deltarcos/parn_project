@@ -63,14 +63,14 @@ public class QuestionController {
 
     
 
-    @PostMapping("/drug/{q}/{a}")
+    @PostMapping("/drug/{q}")
     public Question newQuestion(Question newQuestion,
-    @PathVariable String q,
-    @PathVariable String a)
+    @PathVariable String q )
+
 
     {
     newQuestion.setQuestion(q);
-    newQuestion.setAnswer(a);
+    //newQuestion.setAnswer(a);
 
 
     return questionRepository.save(newQuestion); 

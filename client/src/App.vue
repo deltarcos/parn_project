@@ -5,8 +5,8 @@
       <v-icon></v-icon>
        </v-btn>
       <v-toolbar-title class="headline text-uppercase">
-        <span>PHARMACY ROOM</span>
-        <span class="font-weight-light"> SYSTEM</span>
+        <span>Online Questions - Answers Guide </span>
+        <span class="font-weight-light"> Website</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn @click="gohome" text href="#" target="_blank">

@@ -43,18 +43,26 @@
 
             <v-row justify="center">
               <v-col cols="12">
-                  <v-text-field block  prepend-icon="sort" label="Question" v-model="question.q"></v-text-field>
+                  <v-text-field block   label="คำถาม" v-model="question.q"></v-text-field>
               </v-col>
             </v-row>
 
             <v-row justify="center">
               <v-col cols="12">
-                  <v-text-field block  prepend-icon="sort" label="Answer" v-model="question.a"></v-text-field>
+                  
+                  <v-textarea
+          name="input-7-1"
+          label="คำตอบ"
+          v-model="question.a"
+          hint="Hint text"
+        ></v-textarea>
               </v-col>
             </v-row>
 
             <br />
           </div>
+
+
         </v-form>
       </v-col>
     </v-row>
@@ -89,12 +97,12 @@ export default {
                     console.log(response);
                     if (response.data[0] != null) {
                         this.question.q = response.data[0].q;
-                        this.question.a = response.data[0].a;
-
+                        this.question.q_id = response.data[0].id;
+                        this.findA();
                         this.drugFound = false;
                         this.qCheck = true;
                         console.log(this.question.q);
-                        console.log(this.question.a);
+                        console.log(this.question.q_id);
 
 
                     } else {
@@ -110,6 +118,30 @@ export default {
             this.submitted = true;
   
   },
+
+  findA() {
+            http
+                .get("/answer/" + this.question.q_id)
+                .then(response => {
+                    console.log(response);
+                    if (response.data != null) {
+                        this.question.a = response.data.a;
+
+
+                        console.log(this.question.a);
+
+
+
+                    } 
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+
+  
+  },
+
+  
   clear() {
       this.$refs.form.reset();
       this.qCheck = false;
