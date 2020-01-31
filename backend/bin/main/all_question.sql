@@ -1,0 +1,1 @@
+INSERT INTO question VALUES (100,'ร่านมาก','อีดอก')
