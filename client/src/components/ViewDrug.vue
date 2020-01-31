@@ -9,14 +9,16 @@
     </v-container>
 
 
-    <v-layout text-center wrap>
+    <v-layout >
       <v-flex mb-4>
         <br />
-        <h1 class="display-2 font-weight-bold mb-3">ค้นหา</h1>
+        <h1 class="display-2 font-weight-bold mb-3">Library FAQs</h1>
       </v-flex>
     </v-layout>
 
-    <v-row justify="center">
+    <v-row >
+      
+      
       <v-col cols="4">
         <v-form v-model="valid" ref="form">
           <v-row justify="center">
@@ -62,10 +64,20 @@
             <br />
           </div>
 
-
+         
+           <br />
         </v-form>
       </v-col>
     </v-row>
+     <h3>Line bot</h3>
+           <br />
+            <h3>การเข้าใช้บริการ </h3>
+           <br />
+            <h3>การเข้าใช้บริการ </h3>
+           <br />
+            <h3>การประชาสัมพันธ์ข่าวสารและกิจกรรมต่างๆ </h3>
+           <br />
+            <h3>การยืม – คืน </h3>
   </v-container>
 </template>
 
