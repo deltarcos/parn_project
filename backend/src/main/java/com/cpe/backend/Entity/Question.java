@@ -34,6 +34,8 @@ public class Question {
  
     private @NotNull String q;
 
+    private @NotNull String a;
+
 
 
 
@@ -45,6 +47,15 @@ public class Question {
 
     public String getQuestion(){
         return q;
+    }
+
+
+    public void setAnswer(String a){
+        this.a = a;
+    }
+
+    public String getAnswer(){
+        return a;
     }
 
 

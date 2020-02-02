@@ -1,20 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app class="yellow accent-1">
-       <v-btn @click="drawer=!drawer" class="ma-2" tile large color="white" icon>
-      <v-icon></v-icon>
-       </v-btn>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Online Questions - Answers Guide </span>
-        <span class="font-weight-light"> Website</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn @click="gohome" text href="#" target="_blank">
-        <v-icon left>home</v-icon> 
-        <span>หน้าแรก</span>
-        
-      </v-btn>
-    </v-app-bar>
+    
  
 
     <v-content>
@@ -25,8 +11,6 @@
 </template>
 
 <script>
-
-
 export default {
   name: 'App',
   data() {
