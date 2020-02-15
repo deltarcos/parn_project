@@ -21,7 +21,7 @@
     "vue2-datepicker": "^2.12.0",
     "vuejs-logger": "1.5.3",
     "vuetify": "^2.0.0",
-    "yarn": "^1.21.1"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.10.0",
